@@ -1,0 +1,116 @@
+
+/* Selector universal */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0px;
+}
+
+main{
+    margin: 20px;
+}
+
+h2{
+    font-family:"Merienda";
+    color: hsl(206.27deg 100% 30%);
+    font-weight: bold;
+}
+
+.top-header{
+    display: flex;
+    background-color: #fff5f1;
+    justify-content: space-between;
+    padding: 0px 150px;
+}
+
+.login-signup{
+    display: flex;
+}
+
+/* Items dentro del login signup */
+.login-signup-item{
+    padding: 15px;
+    align-content: center;
+}
+
+.login-signup-link{
+    /* Le quite el subrayado los links */
+    text-decoration: none;
+    /* Quiero que el color sea el determinado por regla general en css / si no hay regla va el default*/
+    color: inherit;
+    background-color: #d1c8c5;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.image-logo{
+    height: 80px;
+}
+
+#nav-bar-container{
+    background-color: #d99649;
+    padding: 0px 50px;
+}
+
+.nav-header-links{
+    display: flex;
+    list-style: none;
+    /* Le colocamos un margin porque es un ul y tiene por default (15px) */
+    margin: 0px;
+    padding: 10px 0px;
+    justify-content: center;
+    /* Le dice q al ultimo item(hijo)le saque el borde */
+    :last-child{
+        border: 0px;
+    }
+}
+
+.nav-list-item{
+    padding: 0px 10px;
+    border-right: 1px solid white;
+    /* Anidado- a todo a (link) que este dentro de nav list item(clase) le va a dar estas propiedades */
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+footer{
+    background-color: #d99649;
+    border-top: solid #dba86d;
+    /* Lo coloca al fondo */
+    /* position: absolute;
+    width: 100%;
+    bottom: 0px; */
+}
+
+.footer-links{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 10px 0px;
+    justify-content: center;
+}
+
+.footer-list-item{
+    padding: 10px 50px;
+    color: white;
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    }
+}
+
+/* Se coloca en una clase especifica así no afecto a los otros valores del footer */
+.social-links{
+    a{
+        padding: 0px 5px;
+    }
+}
+
+
+
+

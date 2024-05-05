@@ -1,0 +1,25 @@
+
+.book-link{
+    /* Le agregamos una alto debido a que las fotos son de distintos tamaños */
+    img{
+        height: 200px;
+    }
+}
+
+.popular-list{
+    display: flex;
+    border: solid 1px hsl(206.27deg 100% 30%);
+    padding: 10px;
+
+}
+
+.popular-item{
+    padding: 5px;
+    margin: 0px 10px;
+    width: 200px;
+}
+
+.title-book-item{
+    color: hsl(206.27deg 100% 30%);
+    font-style: normal;
+}
