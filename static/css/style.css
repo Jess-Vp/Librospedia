@@ -44,7 +44,10 @@ h2{
     border-radius: 5px;
     padding: 10px;
 }
-
+.login-signup-link:hover{
+    /* Aca le agregamos la animacion de color al momento de hacer el hover */
+    background-color: #af887c;
+}
 .image-logo{
     height: 80px;
 }
@@ -81,8 +84,8 @@ footer{
     background-color: #d99649;
     border-top: solid #dba86d;
     /* Lo coloca al fondo */
-    /* position: absolute;
-    width: 100%;
+    position:static;
+    /* width: 100%;
     bottom: 0px; */
 }
 
