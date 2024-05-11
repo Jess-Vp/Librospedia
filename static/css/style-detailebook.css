@@ -1,0 +1,132 @@
+.book-section{
+    width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.book-cover{
+    display: flex;
+}
+
+.book-image{
+    width: 300px;
+}
+
+.book-counter-box{
+    margin: 0px 25px;
+    padding-left: 25px;
+    border-left: 1px solid rgb(232, 225, 225);
+    h1{
+        margin-bottom: 0px;
+        color: hsl(206.27deg 100% 30%);
+        font-weight: 100;
+    }
+
+    p{
+        margin-top: 5px;
+    }
+}
+
+.book-score{
+
+    h4{
+        margin-bottom: 0px;
+    }
+
+}
+
+/* Le colocamos el color a las estrellas por medio de la clase que le da font family */
+.fa-star{
+    color: hsl(206.27deg 100% 30%);
+}
+
+.category-list{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    padding-right: 150px;
+    flex-wrap: wrap;
+}
+
+.category-item{
+    background-color: hsl(31.86deg 66.21% 57.06%);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 0px;
+    border-radius: 10px;
+    /* Sirve para evitar que en los li que tengan textos largos, quede en dos lineas (avoid text wrap in li-busqueda)*/
+    white-space:nowrap;
+
+
+}
+
+.book-video{
+    margin: 50px 0px;
+}
+
+.book-video-review{
+    margin: auto;
+}
+
+.book-resume-box{
+    display: flex;
+    border-top: 1px solid rgb(232, 225, 225);
+}
+
+.book-specification-box{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-top: 1px solid rgb(232, 225, 225);
+
+}
+
+
+.subtitle-section{
+    /* Atajo a habilidad del item de alterar su dimension para alterar su espacio disponible
+    con estos values le digo flex grow 0 (no crece)
+    flex shrink 0 (no se achica)
+    flex basis 200 (el ancho o el alto de esta medida) */
+    flex: 0 0 200px;
+}
+
+.panel-specification{
+    padding-top: 15px;
+}
+
+.book-attributes{
+    th{
+        text-align: left;
+    }
+}
+
+table{
+    /* Borde de la tabla */
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid rgb(232, 225, 225);
+}
+
+th{
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td{
+    font-weight: lighter;
+}
+
+h3{
+    font-family:"Merienda";
+    color: hsl(206, 68%, 55%);
+    font-weight: bold;
+}
+
+.title-section{
+    font-style:italic;
+
+}
