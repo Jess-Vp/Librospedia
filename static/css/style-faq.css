@@ -1,0 +1,45 @@
+.faq-section{
+    margin: auto;
+    width: 1000px;
+    padding: 0px 30px;
+    h2{
+        padding-left: 50px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+}
+
+.faq-container{
+    border: solid rgb(232, 225, 225);
+    padding: 50px;
+    background-color: #f1edec;
+    margin-bottom: 30px;
+}
+
+.form-field{
+    margin-bottom: 25px;
+    label{
+        display: block;
+        font-family: "Merienda";
+    }
+    input{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+#comment{
+    font-size: 18px;
+}
+
+.form-button-submit{
+    text-align: right;
+}
+
+.send-button{
+    padding: 20px 50px;
+    font-size: 15px;
+}
+.send-button:hover{
+    background-color: #af887c;
+}
