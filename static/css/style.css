@@ -24,6 +24,9 @@ h2{
     justify-content: space-between;
     padding: 0px 150px;
 }
+.sandwich-menu{
+    display: none;
+}
 
 .login-signup{
     display: flex;
@@ -112,6 +115,34 @@ footer{
     a{
         padding: 0px 5px;
     }
+}
+@media screen and (max-width:880px) {
+    .top-header{
+        padding: 0px 50px;
+    }
+}
+@media screen and (max-width:660px) {
+    #logo{
+        padding-left: 15px;
+        
+    }
+    .top-header{
+        padding: 0px;
+    }
+    .sandwich-menu{
+        display: block;
+        align-content: center;
+        i{
+            padding: 20px;
+            margin: 0px 20px;
+            background-color:#f0a652;
+            color: white;
+        }
+    }
+    .login-signup{
+        display: none;
+    }
+    
 }
 
 
