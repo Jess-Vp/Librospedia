@@ -11,21 +11,29 @@ h2{
 
 .library-container{
     margin: auto;
-    width: 1000px;
-    padding: 0px 30px;
+    width: 1200px;
     
 }
 
-
+.library-title{
+    margin:auto;
+    width: 1200px;
+    padding: 0px 30px;
+    h2{
+        padding-bottom: 0px;
+    }
+}
 
 .book-category-sidebar{
-    width: 250px; /* Ancho del menú lateral */
-    height: 100%; /* Altura completa */
+    margin-right: 20px;
+    height: 100%; 
     border: solid 1px rgb(232, 225, 225);
-    left: 0; /* Se alinea a la izquierda */
-    top: 0; /* Se alinea en la parte superior */
-    
+    padding-top: 5px;
+}
 
+.book-categories{
+    margin-top: 0px;
+    padding: 0px;
 }
 
 .category-list-item{
@@ -33,37 +41,61 @@ h2{
     font-family:"Merienda";
     color: hsl(206.27deg 100% 30%);
     font-weight:lighter;
+    padding: 8px 20px;
+    cursor: pointer;
+    h3{
+        margin: 0px;
+    }
 }
 
+.category-list-item:hover{
+    background-color: #f0a652;
+    color: white;
+}
 
 .grid-container{
     display: flex;
-    flex-flow: row wrap;
-    /* Genera tantas columnas como quepan en el contenedor, cada una con un ancho mínimo de 200px */
-    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  */
+    flex-wrap: wrap;
     gap: 20px; /* Espacio entre los elementos */
 }
 
 
-
 .book{
-    /* Le agregamos una alto debido a que las fotos son de distintos tamaños */
-    img{
+    width: 200px;
+    background-color: #f0f0f0; /* Color de fondo para resaltar */
+    border-radius: 5px;
+    padding: 15px 0px;
+     /* Le agregamos una alto debido a que las fotos son de distintos tamaños */
+     img{
         height: 200px;
     }
-    width: 100%; /* O ajusta el ancho según tu diseño */
-    height: 200px; /* O ajusta la altura según tu diseño */
-    background-color: #f0f0f0; /* Color de fondo para resaltar */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    border-radius: 5px;
+}
+
+.book:hover{
+    background-color: #f0a652;
+    color: white;
+    /* Lo tenemos tres veces porque es para distintos navegadores  */
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+
+.book-content{
+    margin: auto;
+    text-align: center;
+    width: 150px;
+}
+
+.title-book-item{
+    p{
+        margin: 0px;
+        font-weight: 700;
+    }
 }
 
 .content-book-item{
-    display: inline-block;
+    p{
+        margin: 0px;
+    }
 }
-
-
-
