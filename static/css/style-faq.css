@@ -22,7 +22,20 @@
         display: block;
         font-family: "Merienda";
     }
-    input{
+    .text-input{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+    }
+    select{
+        font-size: 18px;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    textarea{
+        width: 100%;
+    }
+    option{
         font-size: 18px;
         font-family: Arial, Helvetica, sans-serif;
     }

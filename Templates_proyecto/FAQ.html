@@ -64,20 +64,35 @@
                 <form action="" method="get" id="formFaq">
                 <div class="form-field">
                     <label for="subject">Asunto</label>
-                    <input type="text" name="subject" id="subject" minlength="2" size="100" placeholder="Ingrese el asunto">
+                    <select name="subject" id="subject">
+                        <option value="">Seleccione</option>
+                        <option value="AR">Quiero encontrar un libro</option>
+                        <option value="BO">Me gustaria formar parte</option>
+                        <option value="BR">Comentario de Mejora - Observaciones</option>
+                        <option value="CH">Otro</option>
+                    </select>
                 </div>
                 <div class="form-field">
-                    <label for="firstandlastname">Nombre y Apellido</label>
-                    <input type="text" name="firstandlastname" id="firstandlastname" maxlength="40" size="100" required placeholder="Ingrese su nombre y apellido">
+                    <label for="firstname"> Nombre </label>
+                    <input type="text" class="text-input" name="firstname" id="firstname" maxlength="40" required placeholder="Ingrese su Nombre">
+                </div>
+                <div class="form-field">
+                    <label for="lastname"> Apellido</label>
+                    <input type="text"  class="text-input" name="lastname" id="lastname" maxlength="40" required placeholder="Ingrese su Apellido">
                 </div>
                 <div class="form-field">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" size="100" required placeholder="Ingrese su email">
+                    <input type="email" class="text-input" name="email" id="email" required placeholder="Ingrese su email">
                 </div>
                 <div class="form-field">
                     <label for="comment"> Consulta </label>
-                    <textarea name="comment" id="comment" cols="100" rows="4" required placeholder="Ingrese su mensaje aqui" ></textarea>
+                    <textarea  class="text-input" name="comment" id="comment" rows="4" required placeholder="Ingrese su mensaje aqui" ></textarea>
                 </div>
+                <div class="form-field">
+                    <label for="mailing"> Acepta que nos contactemos por el email informado</label>
+                    <input type="checkbox" id="mailing" name="mailing">
+                </div>
+
                 <div class="form-button-submit">
                     <input type="submit" class="send-button" value="Enviar">
                 </div>    
