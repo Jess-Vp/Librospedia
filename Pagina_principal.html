@@ -11,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!-- Link font awesome -->
     <script src="https://kit.fontawesome.com/f012101e3a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="./static/css/home-style.css">
+
 </head>
 
 <body>
@@ -23,6 +25,9 @@
                     <a href="">
                        <img src="./static/img/logo-librospedia.png" alt="Logo librospedia" class="image-logo">
                     </a> 
+                </div>
+                <div class="sandwich-menu">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
                 <div class="login-signup">
                     <div class="login-signup-item">
@@ -57,9 +62,38 @@
     </header>
 
     <main>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./static/img/carousel-1.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./static/img/carousel-2.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./static/img/carousel-3.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <section id="popular-section"> 
             <h2> Mas populares </h2>
-            <div class="popular-list">
+            <button class="carousel-arrow carousel-arrow--prev" onclick="handleCarouselMove('.popular-list', '.popular-item', false)">
+                &#8249;
+            </button>
+
+            <button class="carousel-arrow carousel-arrow--next" onclick="handleCarouselMove('.popular-list', '.popular-item', true)">
+                &#8250;
+            </button> 
+
+            <div class="popular-list items-list">
                <div class="popular-item">
                     <a href="./Templates_proyecto/La_felicidad_detailbook.html" class="book-link">
                         <img src="./static/img/Gabriel Rolon - La felicidad.jpeg" alt="La felicidad Gabriel Rolón">
@@ -284,8 +318,15 @@
 
         <section id="weekly-recommendations-section"> 
             <h2>Recomendaciones de la semana</h2>
-            <div class="recommendations-list">
-                 <div class="popular-item">
+            <button class="carousel-arrow carousel-arrow--prev" onclick="handleCarouselMove('.recommendations-list', '.recommendation-item', false)">
+                &#8249;
+            </button>
+
+            <button class="carousel-arrow carousel-arrow--next" onclick="handleCarouselMove('.recommendations-list', '.recommendation-item', true)">
+                &#8250;
+            </button> 
+            <div class="recommendations-list items-list">
+                 <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/La_felicidad_detailbook.html" class="book-link">
                         <img src="./static/img/Gabriel Rolon - La felicidad.jpeg" alt="La felicidad Gabriel Rolón">
                     </a>
@@ -298,7 +339,7 @@
                         </div>
                     </div>
                </div>
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                      <a href="./Templates_proyecto/En_agosto_nos_vemos.html" class="book-link">
                          <img src="./static/img/gabriel garcia marquez - En agosto nos vemos.jpg" alt="En Agosto nos vemos Gabriel Garcia Marquez">
                      </a>
@@ -312,7 +353,7 @@
                      </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Asir_philip_juliaquin.html" class="book-link">
                         <img src="./static/img/A-sir-philip-JuliaQuin.jpeg" alt="A sir philip con amor Julia Quin">
                     </a>
@@ -325,7 +366,7 @@
                         </div>
                     </div>
                </div>
-               <div class="popular-item">
+               <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Lacasa_neville_florenciabonelli.html" class="book-link">
                         <img src="./static/img/La casa neville- florencia bonelli.jpeg" alt="La casa Neville Florencia Bonelli">
                     </a>
@@ -338,7 +379,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Comohacer_cosasbuenas.html" class="book-link">
                         <img src="./static/img/como-hacer-que-te-pasen-cosa-buenas-marian-rojas-estape-692324.webp" alt="Como Hacer para que te pasen cosas Buenas Marian Rojas Estapé">
                     </a>
@@ -351,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Alas_sangre_rebeccayarros.html" class="book-link">
                         <img src="./static/img/Alas-de-sangre-Rebecca-Yarros.jpeg" alt="Alas de sangre Rebecca Yarros">
                     </a>
@@ -365,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Espiritu_animal_magalitajes.html" class="book-link">
                         <img src="./static/img/espirituanimal-magalitajes01.jpeg" alt="Espiritu animal Magali Tajes">
                     </a>
@@ -379,7 +420,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Taylor_from_the_vault.html" class="book-link">
                         <img src="./static/img/taylor-from-the-vault.jpg" alt="Espiritu animal Magali Tajes">
                     </a>
@@ -393,7 +434,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Me_alegro_mi_mama_jannette_mccurdy.html" class="book-link">
                         <img src="./static/img/me-alegro-mi-mama-haya-muerto-jennette-mccurdy.jpg" alt="Me Alegro de que mi madre haya muerto Jennette McCurdy">
                     </a>
@@ -407,7 +448,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/El_puñal_jorge_fernandez_diaz.html" class="book-link">
                         <img src="./static/img/el-punal-jorge-fernandez-diaz.jpeg" alt="El Puñal Jorge Fernandez Diaz">
                     </a>
@@ -421,7 +462,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/MIS_DIAS_EN_LA_LIBRERIA_MORISAKI.html" class="book-link">
                         <img src="./static/img/Mis dias en la libreria Morisaki.jpg" alt="Mis Dias en la Libreria Morisaki">
                     </a>
@@ -435,7 +476,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Un_lugar_soleado_para_gente_mariana_enriquez.html" class="book-link">
                         <img src="./static/img/un-lugar-soleado-para.jpg" alt="Un lugar soleado para gente sombría Mariana Enriquez">
                     </a>
@@ -449,7 +490,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/La_mujer_que_soy_britney_spears.html" class="book-link">
                         <img src="./static/img/the-woman-in-me-britney-spears.jpg" alt="La Mujer que soy Britney Spears">
                     </a>
@@ -463,7 +504,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Los_juegos_del_hambre_suzanne_collins.html" class="book-link">
                         <img src="./static/img/los-juegos-del-hambre-1-los-juegos-del-hambre.jpg" alt="Los juegos del Hambre Suzanne Collins">
                     </a>
@@ -477,7 +518,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/Las_indigenas_agustina_bazterrica.html" class="book-link">
                         <img src="./static/img/las-indigenas-agustina-bazterrica.jpeg" alt="Las Indigenas Agustina Bazterrica">
                     </a>
@@ -491,7 +532,7 @@
                     </div>
                 </div>
 
-                <div class="popular-item">
+                <div class="popular-item recommendation-item">
                     <a href="./Templates_proyecto/El_feminismo_maria_elena_walsh.html" class="book-link">
                         <img src="./static/img/el-feminismo-maria-elena-walsh.png" alt="El Feminismo Maria Elena Walsh">
                     </a>
@@ -510,9 +551,16 @@
 
         <section id="novedades-section"> 
             <h2>Novedades</h2>
+            <button class="carousel-arrow carousel-arrow--prev" onclick="handleCarouselMove('.news-list', '.news-item', false)">
+                &#8249;
+            </button>
+
+            <button class="carousel-arrow carousel-arrow--next" onclick="handleCarouselMove('.news-list', '.news-item', true)">
+                &#8250;
+            </button> 
             <div>
-                <div class="novedades-list">
-                    <div class="popular-item">
+                <div class="news-list items-list">
+                    <div class="popular-item news-item">
                          <a href="./Templates_proyecto/La_felicidad_detailbook.html" class="book-link">
                              <img src="./static/img/Gabriel Rolon - La felicidad.jpeg" alt="La felicidad Gabriel Rolón">
                          </a>
@@ -525,7 +573,7 @@
                              </div>
                          </div>
                     </div>
-                     <div class="popular-item">
+                    <div class="popular-item news-item">
                           <a href="./Templates_proyecto/En_agosto_nos_vemos.html" class="book-link">
                               <img src="./static/img/gabriel garcia marquez - En agosto nos vemos.jpg" alt="En Agosto nos vemos Gabriel Garcia Marquez">
                           </a>
@@ -537,9 +585,9 @@
                                  <p>Gabriel Garcia Marquez </p>
                              </div>
                           </div>
-                     </div>
+                    </div>
      
-                     <div class="popular-item">
+                    <div class="popular-item news-item">
                          <a href="./Templates_proyecto/Asir_philip_juliaquin.html" class="book-link">
                              <img src="./static/img/A-sir-philip-JuliaQuin.jpeg" alt="A sir philip con amor Julia Quin">
                          </a>
@@ -552,7 +600,7 @@
                              </div>
                          </div>
                     </div>
-                    <div class="popular-item">
+                    <div class="popular-item news-item">
                          <a href="./Templates_proyecto/Lacasa_neville_florenciabonelli.html" class="book-link">
                              <img src="./static/img/La casa neville- florencia bonelli.jpeg" alt="La casa Neville Florencia Bonelli">
                          </a>
@@ -564,49 +612,49 @@
                                  <p> Florencia Bonelli </p>
                              </div>
                          </div>
-                     </div>
-                     <div class="popular-item">
-                         <a href="./Templates_proyecto/Comohacer_cosasbuenas.html" class="book-link">
-                             <img src="./static/img/como-hacer-que-te-pasen-cosa-buenas-marian-rojas-estape-692324.webp" alt="Como Hacer para que te pasen cosas Buenas Marian Rojas Estapé">
-                         </a>
-                         <div class="content-book-item">
-                             <div class="title-book-item">
-                                 <p> Como Hacer para que te pasen Cosas Buenas </p> 
-                             </div>
-                             <div class="author-book-item">
-                                 <p> Marian Rojas Estapé </p>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="popular-item">
-                         <a href="./Templates_proyecto/Alas_sangre_rebeccayarros.html" class="book-link">
-                             <img src="./static/img/Alas-de-sangre-Rebecca-Yarros.jpeg" alt="Alas de sangre Rebecca Yarros">
-                         </a>
-                         <div class="content-book-item">
-                             <div class="title-book-item">
-                                 <p> Alas de Sangre </p> 
-                             </div>
-                             <div class="author-book-item">
-                                 <p> Rebecca Yarros </p>
-                             </div>
-                         </div>
-                     </div>
+                    </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Comohacer_cosasbuenas.html" class="book-link">
+                            <img src="./static/img/como-hacer-que-te-pasen-cosa-buenas-marian-rojas-estape-692324.webp" alt="Como Hacer para que te pasen cosas Buenas Marian Rojas Estapé">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Como Hacer para que te pasen Cosas Buenas </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Marian Rojas Estapé </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Alas_sangre_rebeccayarros.html" class="book-link">
+                            <img src="./static/img/Alas-de-sangre-Rebecca-Yarros.jpeg" alt="Alas de sangre Rebecca Yarros">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Alas de Sangre </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Rebecca Yarros </p>
+                            </div>
+                        </div>
+                    </div>
      
-                     <div class="popular-item">
-                         <a href="./Templates_proyecto/Espiritu_animal_magalitajes.html" class="book-link">
-                             <img src="./static/img/espirituanimal-magalitajes01.jpeg" alt="Espiritu animal Magali Tajes">
-                         </a>
-                         <div class="content-book-item">
-                             <div class="title-book-item">
-                                 <p> Espiritu Animal </p> 
-                             </div>
-                             <div class="author-book-item">
-                                 <p> Magali Tajes </p>
-                             </div>
-                         </div>
-                     </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Espiritu_animal_magalitajes.html" class="book-link">
+                            <img src="./static/img/espirituanimal-magalitajes01.jpeg" alt="Espiritu animal Magali Tajes">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Espiritu Animal </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Magali Tajes </p>
+                            </div>
+                        </div>
+                    </div>
 
-                     <div class="popular-item">
+                    <div class="popular-item news-item">
                         <a href="./Templates_proyecto/Taylor_from_the_vault.html" class="book-link">
                             <img src="./static/img/taylor-from-the-vault.jpg" alt="Espiritu animal Magali Tajes">
                         </a>
@@ -619,118 +667,118 @@
                             </div>
                         </div>
 
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/Me_alegro_mi_mama_jannette_mccurdy.html" class="book-link">
-                                <img src="./static/img/me-alegro-mi-mama-haya-muerto-jennette-mccurdy.jpg" alt="Me Alegro de que mi madre haya muerto Jennette McCurdy">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> Me Alegro de que mi madre haya Muerto </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Jennete McCurdy </p>
-                                </div>
+                        
+                    </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Me_alegro_mi_mama_jannette_mccurdy.html" class="book-link">
+                            <img src="./static/img/me-alegro-mi-mama-haya-muerto-jennette-mccurdy.jpg" alt="Me Alegro de que mi madre haya muerto Jennette McCurdy">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Me Alegro de que mi madre haya Muerto </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Jennete McCurdy </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/El_puñal_jorge_fernandez_diaz.html" class="book-link">
-                                <img src="./static/img/el-punal-jorge-fernandez-diaz.jpeg" alt="El Puñal Jorge Fernandez Diaz">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> El Puñal</p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Jorge Fernandez Diaz </p>
-                                </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/El_puñal_jorge_fernandez_diaz.html" class="book-link">
+                            <img src="./static/img/el-punal-jorge-fernandez-diaz.jpeg" alt="El Puñal Jorge Fernandez Diaz">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> El Puñal</p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Jorge Fernandez Diaz </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/MIS_DIAS_EN_LA_LIBRERIA_MORISAKI.html" class="book-link">
-                                <img src="./static/img/Mis dias en la libreria Morisaki.jpg" alt="Mis Dias en la Libreria Morisaki">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> Mis Días en la Libreria Morisaki </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Satoshi Yagisawa </p>
-                                </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/MIS_DIAS_EN_LA_LIBRERIA_MORISAKI.html" class="book-link">
+                            <img src="./static/img/Mis dias en la libreria Morisaki.jpg" alt="Mis Dias en la Libreria Morisaki">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Mis Días en la Libreria Morisaki </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Satoshi Yagisawa </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/Un_lugar_soleado_para_gente_mariana_enriquez.html" class="book-link">
-                                <img src="./static/img/un-lugar-soleado-para.jpg" alt="Un lugar soleado para gente sombría Mariana Enriquez">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> Un lugar soleado para gente sombría </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Mariana Enriquez </p>
-                                </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Un_lugar_soleado_para_gente_mariana_enriquez.html" class="book-link">
+                            <img src="./static/img/un-lugar-soleado-para.jpg" alt="Un lugar soleado para gente sombría Mariana Enriquez">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Un lugar soleado para gente sombría </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Mariana Enriquez </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/La_mujer_que_soy_britney_spears.html" class="book-link">
-                                <img src="./static/img/the-woman-in-me-britney-spears.jpg" alt="La Mujer que soy Britney Spears">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> La Mujer que soy </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Britney Spears </p>
-                                </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/La_mujer_que_soy_britney_spears.html" class="book-link">
+                            <img src="./static/img/the-woman-in-me-britney-spears.jpg" alt="La Mujer que soy Britney Spears">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> La Mujer que soy </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Britney Spears </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/Los_juegos_del_hambre_suzanne_collins.html" class="book-link">
-                                <img src="./static/img/los-juegos-del-hambre-1-los-juegos-del-hambre.jpg" alt="Los juegos del Hambre Suzanne Collins">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> Los Juegos del Hambre </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Suzanne Collins </p>
-                                </div>
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Los_juegos_del_hambre_suzanne_collins.html" class="book-link">
+                            <img src="./static/img/los-juegos-del-hambre-1-los-juegos-del-hambre.jpg" alt="Los juegos del Hambre Suzanne Collins">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Los Juegos del Hambre </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Suzanne Collins </p>
                             </div>
                         </div>
-        
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/Las_indigenas_agustina_bazterrica.html" class="book-link">
-                                <img src="./static/img/las-indigenas-agustina-bazterrica.jpeg" alt="Las Indigenas Agustina Bazterrica">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> Las Indigenas </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Agustina Bazterrica </p>
-                                </div>
+                    </div>
+    
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/Las_indigenas_agustina_bazterrica.html" class="book-link">
+                            <img src="./static/img/las-indigenas-agustina-bazterrica.jpeg" alt="Las Indigenas Agustina Bazterrica">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> Las Indigenas </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Agustina Bazterrica </p>
                             </div>
                         </div>
-        
-                        <div class="popular-item">
-                            <a href="./Templates_proyecto/El_feminismo_maria_elena_walsh.html" class="book-link">
-                                <img src="./static/img/el-feminismo-maria-elena-walsh.png" alt="El Feminismo Maria Elena Walsh">
-                            </a>
-                            <div class="content-book-item">
-                                <div class="title-book-item">
-                                    <p> El Feminismo </p> 
-                                </div>
-                                <div class="author-book-item">
-                                    <p> Maria Elena Walsh </p>
-                                </div>
+                    </div>
+    
+                    <div class="popular-item news-item">
+                        <a href="./Templates_proyecto/El_feminismo_maria_elena_walsh.html" class="book-link">
+                            <img src="./static/img/el-feminismo-maria-elena-walsh.png" alt="El Feminismo Maria Elena Walsh">
+                        </a>
+                        <div class="content-book-item">
+                            <div class="title-book-item">
+                                <p> El Feminismo </p> 
+                            </div>
+                            <div class="author-book-item">
+                                <p> Maria Elena Walsh </p>
                             </div>
                         </div>
-
                     </div>
 
                  </div> 
@@ -759,6 +807,14 @@
         </ul>
         </div>
     </footer>
-    
+    <script type="text/javascript">
+        function handleCarouselMove(listSelector,itemSelector, positive = true) {
+            const carousel = document.querySelector(listSelector);
+            const slide = document.querySelector(itemSelector);
+            const slideWidth = slide.clientWidth;
+            carousel.scrollLeft = positive? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

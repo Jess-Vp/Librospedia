@@ -16,6 +16,8 @@ h2{
     font-family:"Merienda";
     color: hsl(206.27deg 100% 30%);
     font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0px;
 }
 
 .top-header{
