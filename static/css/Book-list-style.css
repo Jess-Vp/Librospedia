@@ -10,16 +10,18 @@ h2{
 
 .library-container{
     margin: auto;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;    
     
 }
 
 .library-title{
     margin:auto;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     padding: 0px 30px;
     h2{
-        padding-bottom: 0px;
+        padding-bottom: 15px;
     }
 }
 
@@ -99,21 +101,30 @@ h2{
         margin: 0px;
     }
 }
+
+
+/* PUNTOS DE CORTE  */
+
 @media screen and (max-width:1100px) {
     .library-container {
      width: 850px;
     }   
 }
-@media screen and (max-width:880px) {
+
+@media screen and (max-width: 880px) {
     .library-container {
      width: 650px;
     }   
 }
+
 @media screen and (max-width:660px) {
     .library-container {
         display:block;
         width: 100%;
     }   
+    .library-title{
+        width: 100%;
+    }
     .book-category-sidebar{
         margin-right: 0px;
         display: none;
@@ -121,4 +132,9 @@ h2{
     .grid-container{
         justify-content: center;
     }
+    .footer-list-item{
+        padding: 10px 0px;
+    }
 }
+
+
