@@ -130,3 +130,51 @@ h3{
     font-style:italic;
 
 }
+
+
+@media screen and (max-width: 1060px) {
+    .book-section{
+        width: 800px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .book-section{
+        width: 100%;
+    }
+    .book-video-review {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .book-cover {
+        display: block;
+        text-align: center;
+    }
+    .book-section{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .book-image {
+        max-width: 280px;
+        width: 60%;
+    }
+    .book-counter-box {
+        margin: 0px;
+        padding-left: 0px;
+        border-left: 0px;
+    }
+    .book-video-review {
+        height: 300px;
+    }
+    .category-list{
+        padding-right: 0px;
+        justify-content: center;
+    }
+    .book-resume-box {
+        display: block;
+    }
+    .book-specification-box {
+        display: block;
+    }
+}
