@@ -1,4 +1,4 @@
-    function faqValidation (){
+function faqValidation (){
     var subject = document.getElementById("subject").value;
     var name = document.getElementById("firstname").value;
     var lastname = document.getElementById("lastname").value;
