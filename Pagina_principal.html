@@ -22,12 +22,14 @@
         <nav>
             <div class="top-header">
                 <div id="logo"> 
-                    <a href="">
+                    <a href="/Pagina_principal.html">
                        <img src="./static/img/logo-librospedia.png" alt="Logo librospedia" class="image-logo">
                     </a> 
                 </div>
                 <div class="sandwich-menu">
-                    <i class="fa-solid fa-bars"></i>
+                    <a data-bs-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
                 </div>
                 <div class="login-signup">
                     <div class="login-signup-item">
@@ -40,6 +42,23 @@
             </div>
            
             <div id="nav-bar-container">
+                <div class="collapse" id="collapseMenu">
+                    <div class="card card-body nav-item-collapsed">
+                        <a href="./Templates_proyecto/Books_list.html">Biblioteca</a>
+                    </div>
+                    <div class="card card-body nav-item-collapsed">
+                        <a href="#mas-populares-section">Mas Populares</a>
+                    </div>
+                    <div class="card card-body nav-item-collapsed">
+                        <a href="#novedades-section">Novedades</a>
+                    </div>
+                    <div class="card card-body nav-item-collapsed">
+                        <a href="./Templates_proyecto/About_Us.html">Quienes Somos</a>
+                    </div>
+                    <div class="card card-body nav-item-collapsed">
+                        <a href="./Templates_proyecto/FAQ.html">Consultas</a>
+                    </div>
+                </div>
                 <ul class="nav-links nav-header-links" id="nav-bar-list"> 
                     <li class="nav-list-item"> 
                         <a href="./Templates_proyecto/Books_list.html">Biblioteca</a>

@@ -4,7 +4,6 @@ h2{
     padding-bottom: 25px;
 }
 
-
 .library-container{
     display: flex;
 }
@@ -44,6 +43,7 @@ h2{
     padding: 8px 20px;
     cursor: pointer;
     h3{
+        font-size: 1.17em;
         margin: 0px;
     }
 }
