@@ -168,6 +168,11 @@ footer{
     .nav-item-collapsed:hover{
         background-color: #f5b266;
     }
+
+    .footer-links{
+        display: block;
+        text-align: center;
+    }
 }
 @media screen and (min-width:661px) {
     #collapseMenu{
