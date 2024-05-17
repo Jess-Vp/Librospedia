@@ -83,14 +83,16 @@
         <section class="login-section">
             <h2>Iniciar sesión</h2>
             <div class="login-container">
-                <form action="" method="get" id="formLogin">
+                <form action="" method="get" id="formLogin" onsubmit="return registrationValidation();" novalidate>
                     <div class="form-field">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required placeholder="Ingrese su email">
+                        <span id="emailError" class="error"></span>
                     </div>
                     <div class="form-field">
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password" required>
+                        <span id="passwordError" class="error"></span>
                     </div>
                     <div class="login-submit-button">
                         <input type="submit" class="send-button" value="Acceder">
@@ -121,6 +123,8 @@
         </ul>
         </div>
     </footer>
+
+    <script src="../static/js/Login-validations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

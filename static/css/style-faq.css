@@ -56,3 +56,9 @@
 .send-button:hover{
     background-color: #af887c;
 }
+
+
+.error{
+    color: rgb(236, 34, 34);
+    display: block;
+}
