@@ -14,3 +14,5 @@ Contacto
 Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto con nosotros, no dudes en enviar un correo electrónico a contacto@librospedia.com o mismo desde la sección Consultas, dejando tu pregunta, que en la brevedad nos comunicaremos. 
 
 ¡Disfruta de tu experiencia en Librospedia!
+
+Accede a nuestra pagina: https://librospedia.netlify.app 
