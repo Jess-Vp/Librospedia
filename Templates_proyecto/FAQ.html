@@ -61,41 +61,49 @@
         <section class="faq-section">
             <h2> Consultas</h2>
             <div class="faq-container">
-                <form action="" method="get" id="formFaq">
-                <div class="form-field">
-                    <label for="subject">Asunto</label>
-                    <select name="subject" id="subject">
-                        <option value="">Seleccione</option>
-                        <option value="AR">Quiero encontrar un libro</option>
-                        <option value="BO">Me gustaria formar parte</option>
-                        <option value="BR">Comentario de Mejora - Observaciones</option>
-                        <option value="CH">Otro</option>
-                    </select>
-                </div>
-                <div class="form-field">
-                    <label for="firstname"> Nombre </label>
-                    <input type="text" class="text-input" name="firstname" id="firstname" maxlength="40" required placeholder="Ingrese su Nombre">
-                </div>
-                <div class="form-field">
-                    <label for="lastname"> Apellido</label>
-                    <input type="text"  class="text-input" name="lastname" id="lastname" maxlength="40" required placeholder="Ingrese su Apellido">
-                </div>
-                <div class="form-field">
-                    <label for="email">Email</label>
-                    <input type="email" class="text-input" name="email" id="email" required placeholder="Ingrese su email">
-                </div>
-                <div class="form-field">
-                    <label for="comment"> Consulta </label>
-                    <textarea  class="text-input" name="comment" id="comment" rows="4" required placeholder="Ingrese su mensaje aqui" ></textarea>
-                </div>
-                <div class="form-field">
-                    <label for="mailing"> Acepta que nos contactemos por el email informado</label>
-                    <input type="checkbox" id="mailing" name="mailing">
-                </div>
+                <form action="" method="get" id="formFaq" onsubmit="return faqValidation();" novalidate>
+                    <div class="form-field">
+                        <label for="subject">Asunto</label>
+                        <select name="subject" id="subject">
+                            <option value="">Seleccione</option>
+                            <option value="AR">Quiero encontrar un libro</option>
+                            <option value="BO">Me gustaria formar parte</option>
+                            <option value="BR">Comentario de Mejora - Observaciones</option>
+                            <option value="CH">Otro</option>
+                        </select>
+                        <span id="subjectError" class="error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="firstname"> Nombre </label>
+                        <input type="text" class="text-input" name="firstname" id="firstname" maxlength="40"  placeholder="Ingrese su Nombre">
+                        <span id="nameError" class="error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="lastname"> Apellido</label>
+                        <input type="text"  class="text-input" name="lastname" id="lastname" maxlength="40" required placeholder="Ingrese su Apellido">
+                        <span id="lastnameError" class="error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" class="text-input" name="email" id="email" required placeholder="Ingrese su email">
+                        <span id="emailError" class="error"> </span>
+                    </div>
+                    <div class="form-field">
+                        <label for="comment"> Consulta </label>
+                        <textarea  class="text-input" name="comment" id="comment" rows="4" required placeholder="Ingrese su mensaje aqui" ></textarea>
+                        <span id="commentError" class="error"> </span>
 
-                <div class="form-button-submit">
-                    <input type="submit" class="send-button" value="Enviar">
-                </div>    
+                    </div>
+                    <div class="form-field">
+                        <label for="mailing"> Acepta que nos contactemos por el email informado</label>
+                        <input type="checkbox" id="mailing" name="mailing">
+                        <span id="mailingError" class="error"> </span>
+
+                    </div>
+
+                    <div class="form-button-submit">
+                        <input type="submit" class="send-button" value="Enviar">
+                    </div>    
                 </form>
             
             </div>
@@ -124,5 +132,7 @@
         </div>
     </footer>
     
+    <script src="../static/js/FAQ-validations.js"></script>
+
 </body>
 </html>

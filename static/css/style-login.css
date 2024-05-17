@@ -23,7 +23,22 @@
         display: block;
         font-family: "Merienda";
     }
+    .text-input{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+    }
+
     input{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    select{
+        font-size: 18px;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    option{
         font-size: 18px;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -39,4 +54,11 @@
 }
 .send-button:hover{
     background-color: #af887c;
+}
+
+
+.error{
+    color: rgb(236, 34, 34);
+    display: block;
+
 }
