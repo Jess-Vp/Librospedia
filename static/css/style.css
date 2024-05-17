@@ -20,6 +20,11 @@ h2{
     margin-bottom: 0px;
 }
 
+img{
+    content-visibility: auto;
+}
+
+
 .top-header{
     display: flex;
     background-color: #fff5f1;
