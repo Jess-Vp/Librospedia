@@ -16,6 +16,8 @@ h2{
     font-family:"Merienda";
     color: hsl(206.27deg 100% 30%);
     font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0px;
 }
 
 .top-header{
@@ -133,7 +135,7 @@ footer{
         display: block;
         align-content: center;
         i{
-            padding: 20px;
+            padding: 15px;
             margin: 0px 20px;
             background-color:#f0a652;
             color: white;
@@ -142,7 +144,30 @@ footer{
     .login-signup{
         display: none;
     }
-    
+    #nav-bar-list{
+        display: none;
+    }
+    #nav-bar-container{
+        padding: 0px;
+    }
+    .nav-item-collapsed{
+        background-color: #f0a652;
+        border-radius: 0px;
+        padding: 0px;
+        a{
+            text-decoration: none;
+            color: white;
+            padding:15px;
+        }        
+    }
+    .nav-item-collapsed:hover{
+        background-color: #f5b266;
+    }
+}
+@media screen and (min-width:661px) {
+    #collapseMenu{
+        display: none;
+    }
 }
 
 
