@@ -98,6 +98,7 @@ async function saveBook(){
   
   const formBook = document.querySelector('#form-books');
   formBook.reset();
+  document.querySelector("#id-book").value = '';
   Swal.fire({
     title: 'Exito!',
     text: result.message,
