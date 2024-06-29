@@ -35,17 +35,17 @@ img{
     display: none;
 }
 
-.login-signup{
+.top-header-buttons{
     display: flex;
 }
 
 /* Items dentro del login signup */
-.login-signup-item{
+.top-header-button{
     padding: 15px;
     align-content: center;
 }
 
-.login-signup-link{
+.top-header-buttons-link{
     /* Le quite el subrayado los links */
     text-decoration: none;
     /* Quiero que el color sea el determinado por regla general en css / si no hay regla va el default*/
@@ -54,7 +54,7 @@ img{
     border-radius: 5px;
     padding: 10px;
 }
-.login-signup-link:hover{
+.top-header-buttons-link:hover{
     /* Aca le agregamos la animacion de color al momento de hacer el hover */
     background-color: #af887c;
 }
@@ -146,7 +146,7 @@ footer{
             color: white;
         }
     }
-    .login-signup{
+    .top-header-buttons{
         display: none;
     }
     #nav-bar-list{
@@ -179,7 +179,6 @@ footer{
         display: none;
     }
 }
-
 
 
 
