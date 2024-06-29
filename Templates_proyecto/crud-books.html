@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librospedia CRUD</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <!-- Link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Link font awesome -->
+    <script src="https://kit.fontawesome.com/f012101e3a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/crud-style.css">
+
+    
+    <!-- INTERNO AL DOCUMENTO -->
+    <!-- <script>
+        alert('Hola mundo JS C#24162 😎');
+    </script> -->
+</head>
+
+<!-- Agregamos CCS en linea -->
+<body >
+    <!-- Agregar comentario -->
+    <!-- INDICAR LA CABECERA -->
+    <header class="header">
+        <!-- indica que un menu de navegacion -->
+        <nav>
+            <div class="top-header">
+                <div id="logo"> 
+                    <a href="/index.html">
+                       <img src="../static/img/logo-librospedia.png" alt="Logo librospedia" class="image-logo">
+                    </a> 
+                </div>
+
+                <div class="sandwich-menu">
+                    <a data-bs-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <div class="top-header-buttons">
+                    <div class="top-header-button">
+                        <a href="./Registration.html" class="top-header-buttons-link">Registro</a> 
+                    </div>
+                    <div class="top-header-button">
+                        <a href="./Login.html" class="top-header-buttons-link">Inicio de sesion</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- Indicar contenido principal de la pagina -->
+    <main> 
+        <section id="form" class="container ">
+            <h2 class="search-title">Gestión de Libros</h2>
+            <p class="description" > Aquí podrá llevar a cabo la gestión de los libros de la Biblioteca</p>
+            <form action="#"  id="form-books">
+                <div class="d-flex">
+                    <div class="form-control d-flex-column">
+                        <label for="title">Título</label>
+                        <input type="text" class="input-search" name="title" id="title">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="language">Language</label>
+                        <input type="text" class="input-search" name="lamguage" id="language">
+                    </div>  
+                    <div class="form-control d-flex-column">
+                        <label for="ranking">Ranking</label>
+                        <input type="number" class="input-search" name="ranking" id="ranking" min="1" max="5">
+                    </div>  
+                    <div class="form-control d-flex-column">
+                        <label for="video_url">Video url</label>
+                        <input type="url" class="input-search" name="video_url" id="video_url">
+                    </div>       
+                    <div class="form-control d-flex-column">
+                        <label for="cover">Cover</label>
+                        <input type="url" class="input-search" name="cover" id="cover">
+                    </div>  
+                    <div class="form-control d-flex-column">
+                        <label for="author">Author</label>
+                        <input type="text" class="input-search" name="author" id="author">
+                    </div>                
+                    <input type="hidden"  name="id_book" id="id-book">
+                    <button class="button-crud" type="button" id="button-save-book"> Agregar</button>
+                </div>
+            </form> 
+        </section>
+        <section id="list" class="container book-list-container">
+            <h2 class="subtitle">Listado de peliculas</h2>
+            <table id="list-table-books" class="table">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Language</th>
+                        <th>Ranking</th>
+                        <th>Video url</th>
+                        <th>Cover</th>
+                        <th>Author</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-books">
+                    
+                </tbody>
+            </table>
+        </section>  
+    </main>
+    <!-- Indicar el pie de página -->
+    <footer id="footer">
+        <div id="footer-container">
+            <ul class="footer-links">
+                <li class="footer-list-item">
+                    <a href="../Templates_proyecto/About_Us.html">Quienes somos</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="../Templates_proyecto/FAQ.html">Consultas</a>
+                </li>
+                <li class="footer-list-item social-links">
+                    <b>Redes sociales:</b>
+                    <a href="https://www.instagram.com"> <i class="fa-brands fa-instagram"></i> </a>
+                    <a href="https://www.tiktok.com"> <i class="fa-brands fa-tiktok"></i> </a>
+                    <a href="https://www.facebook.com"> <i class="fa-brands fa-facebook"> </i> </a>
+                    <a href="https://www.x.com"> <i class="fa-brands fa-x-twitter"></i> </a>
+                    <a href="https://www.linkedin.com"> <i class="fa-brands fa-linkedin"></i> </a>
+                </li>
+            </ul>
+            </div>
+    </footer>
+
+    <!-- INTERNO AL DOCUMENTO -->
+    <script>
+        // alert('Hola mundo JS C#24162 😎');
+        // console.log('Hola por medio de la consola 😀');
+    </script>
+
+    <!-- REFERENCIA EXTERNA -->
+    <!-- <script src="./static/js/index.js"></script> -->
+    <!-- <script src="./static/js/funciones.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/js/crud-books-fetch.js"></script>
+
+</body>
+
+</html>
